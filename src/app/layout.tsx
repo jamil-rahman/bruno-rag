@@ -15,8 +15,21 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Bruno RAG Chatbot",
-  description: "An intelligent chatbot powered by RAG technology",
+  title: "Bruno | Your Friendly Cloud Advisor",
+  description: "An intelligent chatbot powered by RAG technology to answer your questions about investments in Canada",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+    shortcut: { url: "/favicon.png" }
+  },
+  openGraph: {
+    title: "Bruno | Your Friendly Cloud Advisor",
+    description: "An intelligent chatbot powered by RAG technology to answer your questions about investments in Canada",
+    images: "/favicon.png",
+  }
 };
 
 export default function RootLayout({

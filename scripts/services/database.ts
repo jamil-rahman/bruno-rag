@@ -6,7 +6,7 @@ export class DatabaseService {
   private static client = new DataAPIClient(config.astra.applicationToken)
   private static db = this.client.db(config.astra.apiEndpoint, { keyspace: config.astra.namespace })
 
-  static async createCollection(similarityMetric: SimilarityMetric = "cosine") {
+  static async createCollection(similarityMetric: SimilarityMetric = "dot_product") {
     const res = await this.db.createCollection(config.astra.collection, {
       vector: {
         dimension: config.vector.dimension,
